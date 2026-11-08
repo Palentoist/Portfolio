@@ -1,4 +1,25 @@
     /* Layout: fixed left column (identity + scroll-spy nav) beside a scrolling right column of Experience, Projects, Writing; stacks on phones. */
+
+    html {
+        scroll-padding-top: env(safe-area-inset-top, 0px)
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font: 14px -apple-system, BlinkMacSystemFont, sans-serif;
+        background: #fff;
+        color: #000
+    }
+
+    img {
+        max-width: 100%
+    }
+
+    [hidden]:not([hidden=until-found i]) {
+        display: none !important
+    }
+
     :root {
         --bg: #0b1220;
         --fg: #94a3b8;
@@ -628,24 +649,4 @@
         box-sizing: border-box;
         padding-top: env(safe-area-inset-top, 0px);
         padding-bottom: env(safe-area-inset-bottom, 0px)
-    }
-
-    html {
-        scroll-padding-top: env(safe-area-inset-top, 0px)
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        font: 14px -apple-system, BlinkMacSystemFont, sans-serif;
-        background: #fff;
-        color: #000
-    }
-
-    img {
-        max-width: 100%
-    }
-
-    [hidden]:not([hidden=until-found i]) {
-        display: none !important
     }
