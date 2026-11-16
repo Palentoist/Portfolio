@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description"
+        content="Smart Freight Matching & Recommendation System — an academic project that matches shipments with suitable vehicles using filtering, weighted scoring and machine learning.">
+    <link rel="icon" type="image/png" href="../Assets/Logo.png">
+    <title>Smart Freight Matching System | Shawaiz Ali Shah</title>
+    <link rel="stylesheet" href="../project.css">
+</head>
+
+<body>
+    <a class="skip" href="#content">Skip to content</a>
+
+    <div class="topbar">
+        <div class="topbar-in">
+            <a class="back" href="../index.html#projects">&larr; All projects</a>
+            <button class="theme" id="theme" type="button" aria-label="Switch colour theme">Theme: auto</button>
+        </div>
+    </div>
+
+    <main id="content">
+        <p class="eyebrow">Project · Academic · Machine learning</p>
+        <h1>Smart Freight Matching &amp; Recommendation System</h1>
+        <p class="lead">An academic project that matches shipments with suitable vehicles by filtering out unsuitable
+            options and ranking the rest with a weighted scoring model.</p>
+
+        <div class="actions">
+            <!-- Add your links when available:
+      <a class="btn primary" href="YOUR-GITHUB-REPO-URL" target="_blank" rel="noopener noreferrer">View source on GitHub</a> -->
+            <span class="todo">Add a source or demo link when available</span>
+        </div>
+
+        <div class="hero" style="--c1:#0f766e;--c2:#334155">
+            <img src="../Assets/Freight-Matching.png" alt="Screenshot of the Smart Freight Matching system"
+                onerror="this.remove()">
+        </div>
+
+        <ul class="meta">
+            <li><span class="k">Role</span><span class="v"><span class="todo">Add your role</span></span></li>
+            <li><span class="k">Type</span><span class="v">Academic project</span></li>
+            <li><span class="k">Timeline</span><span class="v"><span class="todo">Add dates</span></span></li>
+            <li><span class="k">Status</span><span class="v"><span class="todo">Completed / in progress</span></span>
+            </li>
+        </ul>
+
+        <h2>Overview</h2>
+        <p>Choosing the right vehicle for a shipment affects cost, efficiency, and cargo safety. This system automates
+            that decision: it first removes vehicles that physically cannot carry the shipment, then ranks the remaining
+            options so the best match appears first.</p>
+
+        <h2>How it works</h2>
+        <ol class="features">
+            <li><strong>Filter:</strong> vehicles that are physically unsuitable for the shipment are removed.</li>
+            <li><strong>Score:</strong> the remaining vehicles are ranked using weighted factors: capacity utilisation,
+                cost, availability, route distance, cargo suitability, and fuel efficiency.</li>
+            <li><strong>Estimate:</strong> machine learning supports cargo volume and damage estimation.</li>
+        </ol>
+
+        <h2>Key features</h2>
+        <ul class="features">
+            <li>Two-stage matching: hard constraints first, then weighted ranking.</li>
+            <li>Multi-factor recommendation scoring.</li>
+            <li>Route distance calculations through a Maps API.</li>
+            <li>Redis for fast access to frequently used data.</li>
+            <li><span class="todo">Add more features, e.g. dashboard, shipment input form, results view</span></li>
+        </ul>
+
+        <h2>Tech stack</h2>
+        <ul class="chips">
+            <li>SQL</li>
+            <li>Redis</li>
+            <li>Maps API</li>
+            <li>Machine Learning</li>
+            <li>Weighted Scoring</li>
+        </ul>
+
+        <h2>Screenshots</h2>
+        <div class="gallery">
+            <figure>
+                <img src="../Assets/Freight-Matching.png" alt="Freight Matching main screen" loading="lazy"
+                    onerror="this.closest('figure').remove()">
+                <figcaption>Main screen</figcaption>
+            </figure>
+            <figure>
+                <img src="../Assets/Freight-Matching-2.png" alt="Freight Matching second screen" loading="lazy"
+                    onerror="this.closest('figure').remove()">
+                <figcaption><span class="todo">Describe this screenshot</span></figcaption>
+            </figure>
+        </div>
+
+        <h2>Challenges and solutions</h2>
+        <p><span class="todo">Write 2–3 sentences: e.g. choosing scoring weights, handling missing data, or training the
+                estimation models.</span></p>
+
+        <h2>What I learned</h2>
+        <p><span class="todo">Write 2–3 sentences about recommendation logic, combining a database with caching, and
+                applying machine learning to a real problem.</span></p>
+
+        <nav class="pager" aria-label="Project navigation">
+            <a class="prev" href="real-estate.html"><small>Previous project</small>&larr; Real Estate Web App</a>
+            <span class="spacer"></span>
+        </nav>
+    </main>
+
+    <footer class="foot">
+        <span>&copy; <span id="year">2026</span> Shawaiz Ali Shah</span>
+        <a href="../index.html">Back to portfolio</a>
+    </footer>
+
+    <script src="../project.js"></script>
+</body>
+
+</html>
