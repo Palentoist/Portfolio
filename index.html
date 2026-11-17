@@ -9,6 +9,7 @@
   <link rel="icon" type="image/png" href="./Assets/Logo.png">
   <title>Shawaiz Ali Shah | Developer Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="experience.css">
 </head>
 
 <body>
@@ -34,6 +35,7 @@
           <ul>
             <li><a href="#about" class="active">About</a></li>
             <li><a href="#experience">Education</a></li>
+            <li><a href="#work">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#writing">Skills</a></li>
           </ul>
@@ -113,6 +115,51 @@
             </div>
           </li>
         </ol>
+      </section>
+
+      <section id="work" aria-label="Experience">
+        <h2 class="sec-title">Where I've Worked</h2>
+
+        <div class="exp">
+          <div class="exp-tabs" role="tablist" aria-label="Work experience" aria-orientation="vertical">
+            <button class="exp-tab" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true"
+              type="button">Company One</button>
+            <button class="exp-tab" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1"
+              type="button">Company Two</button>
+            <button class="exp-tab" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1"
+              type="button">Company Three</button>
+          </div>
+
+          <div class="exp-panels">
+            <div class="exp-panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1" tabindex="0">
+              <h3><span class="todo">Job title</span> <span class="at">@ <span class="todo">Company One</span></span></h3>
+              <p class="exp-dates"><span class="todo">Month Year – Month Year</span></p>
+              <ul class="exp-points">
+                <li><span class="todo">What you built or worked on, and the technologies you used.</span></li>
+                <li><span class="todo">A result, such as something faster, simpler, or used by real people.</span></li>
+                <li><span class="todo">How you worked with a team, a client, or a supervisor.</span></li>
+              </ul>
+            </div>
+
+            <div class="exp-panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" tabindex="0" hidden>
+              <h3><span class="todo">Job title</span> <span class="at">@ <span class="todo">Company Two</span></span></h3>
+              <p class="exp-dates"><span class="todo">Month Year – Month Year</span></p>
+              <ul class="exp-points">
+                <li><span class="todo">Describe your main responsibility.</span></li>
+                <li><span class="todo">Describe something you delivered.</span></li>
+              </ul>
+            </div>
+
+            <div class="exp-panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" tabindex="0" hidden>
+              <h3><span class="todo">Job title</span> <span class="at">@ <span class="todo">Company Three</span></span></h3>
+              <p class="exp-dates"><span class="todo">Month Year – Month Year</span></p>
+              <ul class="exp-points">
+                <li><span class="todo">Describe your main responsibility.</span></li>
+                <li><span class="todo">Describe something you delivered.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="projects" aria-label="Projects">
@@ -281,6 +328,7 @@
   </div>
 
   <script src="scripts.js"></script>
+  <script src="experience.js"></script>
 </body>
 
 </html>

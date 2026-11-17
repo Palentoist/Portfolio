@@ -708,3 +708,169 @@
     .thumb:has(img) i {
         display: none;
     }
+
+    .exp {
+        --exp-accent: var(--accent, #5eead4);
+        --exp-muted: var(--muted, #8892b0);
+        --exp-line: var(--line, rgba(136, 146, 176, .35));
+        display: flex;
+        gap: 28px;
+        margin-top: 24px;
+    }
+
+    /* ---------- Tab list ---------- */
+    .exp-tabs {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 180px;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        border-left: 2px solid var(--exp-line);
+    }
+
+    .exp-tab {
+        font: inherit;
+        font-size: .85rem;
+        letter-spacing: .02em;
+        text-align: left;
+        color: var(--exp-muted);
+        background: transparent;
+        border: 0;
+        border-left: 2px solid transparent;
+        margin-left: -2px;
+        padding: 12px 18px;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: color .2s ease, background .2s ease, border-color .2s ease;
+    }
+
+    .exp-tab:hover,
+    .exp-tab:focus-visible {
+        color: var(--exp-accent);
+        background: color-mix(in srgb, var(--exp-accent) 10%, transparent);
+    }
+
+    .exp-tab[aria-selected="true"] {
+        color: var(--exp-accent);
+        border-left-color: var(--exp-accent);
+        background: color-mix(in srgb, var(--exp-accent) 8%, transparent);
+    }
+
+    .exp-tab:focus-visible {
+        outline: 2px solid var(--exp-accent);
+        outline-offset: -2px;
+    }
+
+    /* ---------- Panels ---------- */
+    .exp-panels {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .exp-panel {
+        animation: expFade .3s ease;
+    }
+
+    .exp-panel[hidden] {
+        display: none;
+    }
+
+    @keyframes expFade {
+        from {
+            opacity: 0;
+            transform: translateY(6px);
+        }
+
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    .exp-panel h3 {
+        margin: 0 0 4px;
+        font-size: 1.15rem;
+        font-weight: 600;
+    }
+
+    .exp-panel h3 .at {
+        color: var(--exp-accent);
+    }
+
+    .exp-dates {
+        margin: 0 0 18px;
+        font-size: .82rem;
+        color: var(--exp-muted);
+        letter-spacing: .03em;
+    }
+
+    .exp-points {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .exp-points li {
+        position: relative;
+        padding-left: 28px;
+        margin-bottom: 10px;
+        color: var(--exp-muted);
+    }
+
+    .exp-points li::before {
+        content: "\25B9";
+        /* ▹ */
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--exp-accent);
+    }
+
+    /* ---------- Highlighted placeholders (delete once filled in) ---------- */
+    .todo {
+        background: #fff3bf;
+        color: #7a5b00;
+        padding: 1px 6px;
+        border-radius: 5px;
+        font-size: .92em;
+    }
+
+    /* ---------- Mobile: tabs become a horizontal scroll bar ---------- */
+    @media (max-width: 640px) {
+        .exp {
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .exp-tabs {
+            flex-direction: row;
+            flex: none;
+            overflow-x: auto;
+            border-left: 0;
+            border-bottom: 2px solid var(--exp-line);
+            scrollbar-width: thin;
+        }
+
+        .exp-tab {
+            border-left: 0;
+            border-bottom: 2px solid transparent;
+            margin: 0 0 -2px;
+            padding: 10px 16px;
+        }
+
+        .exp-tab[aria-selected="true"] {
+            border-left-color: transparent;
+            border-bottom-color: var(--exp-accent);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .exp-panel {
+            animation: none;
+        }
+
+        .exp-tab {
+            transition: none;
+        }
+    }
