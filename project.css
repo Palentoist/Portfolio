@@ -417,3 +417,9 @@ p {
         scroll-behavior: auto !important;
     }
 }
+
+.todo {
+    background: none;
+    color: inherit;
+    padding: 0;
+}

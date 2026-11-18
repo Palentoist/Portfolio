@@ -874,3 +874,9 @@
             transition: none;
         }
     }
+
+    .todo {
+        background: none;
+        color: inherit;
+        padding: 0;
+    }
