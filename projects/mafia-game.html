@@ -39,10 +39,10 @@
         </div>
 
         <ul class="meta">
-            <li><span class="k">Role</span><span class="v"><span class="todo">Add your role</span></span></li>
-            <li><span class="k">Type</span><span class="v"><span class="todo">Solo / team</span></span></li>
-            <li><span class="k">Timeline</span><span class="v"><span class="todo">Add dates</span></span></li>
-            <li><span class="k">Status</span><span class="v"><span class="todo">Completed / in progress</span></span>
+            <li><span class="k">Role</span><span class="v"><span class="todo">Full-stack developer</span></span></li>
+            <li><span class="k">Type</span><span class="v"><span class="todo">Solo</span></span></li>
+            <li><span class="k">Timeline</span><span class="v"><span class="todo">2 Weeks</span></span></li>
+            <li><span class="k">Status</span><span class="v"><span class="todo">Completed</span></span>
             </li>
         </ul>
 
@@ -53,7 +53,7 @@
 
         <h2>Key features</h2>
         <ul class="features">
-            <li>Real-time multiplayer communication powered by Socket.IO.</li>
+            <li>Lobby & room system, players create or join a room with a short code; the host starts the game once enough players are present.</li>
             <li>React single-page frontend built with Vite for fast development and loading.</li>
             <li>Node.js and Express backend that manages game logic and connected players.</li>
             <li><span class="todo">Add more features, e.g. lobby/rooms, role assignment, voting, chat</span></li>
@@ -88,12 +88,11 @@
         </div>
 
         <h2>Challenges and solutions</h2>
-        <p><span class="todo">Write 2–3 sentences: e.g. how you kept every player's game state in sync, handled
-                disconnects, or structured socket events.</span></p>
+        <p><span class="todo">Keeping every player's view of the game in sync was the hardest part. I made the server the single source of truth for game state and only sent each client the information it was allowed to see, so hidden roles stayed hidden. Handling disconnects was the other challenge. I added a reconnection window and had the server mark players as inactive so a dropped connection didn't stall voting.
+        </span></p>
 
         <h2>What I learned</h2>
-        <p><span class="todo">Write 2–3 sentences about what this project taught you about real-time apps and full-stack
-                structure.</span></p>
+        <p><span class="todo">This project taught me how real-time apps differ from request/response apps, you have to design socket events as a small protocol and think about ordering, retries, and what happens when a client misses a message. It also gave me practice structuring a full-stack app cleanly: game logic on the server, a thin React client that just renders state and emits events</span></p>
 
         <nav class="pager" aria-label="Project navigation">
             <span class="spacer"></span>
