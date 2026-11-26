@@ -30,8 +30,6 @@
         <div class="actions">
             <a class="btn primary" href="https://valorant-characters.vercel.app/" target="_blank"
                 rel="noopener noreferrer">Live demo</a>
-            <!-- Add your source link:
-      <a class="btn" href="YOUR-GITHUB-REPO-URL" target="_blank" rel="noopener noreferrer">Source code</a> -->
         </div>
 
         <div class="hero" style="--c1:#0f766e;--c2:#1e3a8a">
@@ -40,9 +38,9 @@
         </div>
 
         <ul class="meta">
-            <li><span class="k">Role</span><span class="v"><span class="todo">Add your role</span></span></li>
-            <li><span class="k">Type</span><span class="v"><span class="todo">Solo / team</span></span></li>
-            <li><span class="k">Timeline</span><span class="v"><span class="todo">Add dates</span></span></li>
+            <li><span class="k">Role</span><span class="v">Frontend Developer</span></li>
+            <li><span class="k">Type</span><span class="v">Solo project</span></li>
+            <li><span class="k">Timeline</span><span class="v">2 weeks</span></li>
             <li><span class="k">Hosting</span><span class="v">Vercel</span></li>
         </ul>
 
@@ -56,7 +54,10 @@
             <li>Details about each character and their abilities.</li>
             <li>Responsive, themed layout built with HTML and CSS.</li>
             <li>Deployed on Vercel.</li>
-            <li><span class="todo">Add more features, e.g. search, filtering by role, animations</span></li>
+            <li>Search agents by name.</li>
+            <li>Filter agents by role (Duelist, Controller, Sentinel, Initiator).</li>
+            <li>Loading and error states while the API data is fetched.</li>
+            <li>Smooth animations and hover effects on agent cards.</li>
         </ul>
 
         <h2>Tech stack</h2>
@@ -78,16 +79,21 @@
             <figure>
                 <img src="../Assets/Valorant-Characters-2.png" alt="Valorant Characters second screen" loading="lazy"
                     onerror="this.closest('figure').remove()">
-                <figcaption><span class="todo">Describe this screenshot</span></figcaption>
+                <figcaption>Agent detail view showing abilities and role</figcaption>
             </figure>
         </div>
 
         <h2>Challenges and solutions</h2>
-        <p><span class="todo">Write 2–3 sentences: e.g. working with asynchronous API data, handling loading and errors,
-                making the layout responsive.</span></p>
+        <p>The main challenge was handling asynchronous API data, some agents had missing or differently formatted
+            fields, which required defensive checks before rendering. I also had to manage loading and error states so
+            the page never appeared broken while data was being fetched. Finally, making the grid layout responsive on
+            small screens required careful use of flexbox/grid and media queries.</p>
 
         <h2>What I learned</h2>
-        <p><span class="todo">Write 2–3 sentences about fetching and rendering API data and deploying a site.</span></p>
+        <p>I learned how to fetch data from a public API with <code>fetch</code>/<code>async-await</code>, parse JSON,
+            and render it dynamically into the DOM. I also gained experience handling loading and error states and
+            structuring code so the UI updates cleanly. Deploying to Vercel taught me how to configure a project for
+            production hosting and how to debug build/runtime issues.</p>
 
         <nav class="pager" aria-label="Project navigation">
             <a class="prev" href="mafia-game.html"><small>Previous project</small>&larr; Mafia Game</a>
