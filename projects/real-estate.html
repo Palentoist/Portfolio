@@ -40,12 +40,10 @@
         </div>
 
         <ul class="meta">
-            <li><span class="k">Role</span><span class="v"><span class="todo">Add your role</span></span></li>
-            <li><span class="k">Type</span><span class="v"><span class="todo">Course project / solo / team</span></span>
-            </li>
-            <li><span class="k">Timeline</span><span class="v"><span class="todo">Add dates</span></span></li>
-            <li><span class="k">Status</span><span class="v"><span class="todo">Completed / in progress</span></span>
-            </li>
+            <li><span class="k">Role</span><span class="v">Full-stack Developer</span></li>
+            <li><span class="k">Type</span><span class="v">Course project</span></li>
+            <li><span class="k">Timeline</span><span class="v">6 weeks</span></li>
+            <li><span class="k">Status</span><span class="v">Completed</span></li>
         </ul>
 
         <h2>Overview</h2>
@@ -58,8 +56,10 @@
             <li>Passwords protected with Bcrypt hashing.</li>
             <li>Protection against cross-site scripting (XSS).</li>
             <li>Responsive pages using Bootstrap, with Vanilla JS and jQuery for interactivity.</li>
-            <li><span class="todo">Add more features, e.g. property listings, search, user accounts, admin panel</span>
-            </li>
+            <li>User registration and login with session-based authentication.</li>
+            <li>Browse, view, and manage property listings.</li>
+            <li>Search and filter listings by location, price, and property type.</li>
+            <li>Admin panel for creating, editing, and deleting listings.</li>
         </ul>
 
         <h2>Tech stack</h2>
@@ -83,21 +83,29 @@
             <figure>
                 <img src="../Assets/Real-Estate-App-2.png" alt="Real Estate app second screen" loading="lazy"
                     onerror="this.closest('figure').remove()">
-                <figcaption><span class="todo">Describe this screenshot</span></figcaption>
+                <figcaption>Property listings page with search and filtering</figcaption>
             </figure>
             <figure>
                 <img src="../Assets/Real-Estate-App-3.png" alt="Real Estate app third screen" loading="lazy"
                     onerror="this.closest('figure').remove()">
-                <figcaption><span class="todo">Describe this screenshot</span></figcaption>
+                <figcaption>Admin panel for managing property listings</figcaption>
             </figure>
         </div>
 
         <h2>Challenges and solutions</h2>
-        <p><span class="todo">Write 2–3 sentences: e.g. deploying Laravel to shared hosting, database relations, or
-                securing user input.</span></p>
+        <p>The main challenge was deploying a Laravel application with its Vite-built assets to shared hosting, which
+            required configuring the public directory as the web root and handling environment variables securely. I
+            also had to design the database schema with proper relationships between users and listings, and secure all
+            user input using Laravel's validation and Blade's automatic escaping to prevent XSS. Debugging
+            migration-related issues and keeping the local and production databases in sync taught me to plan schema
+            changes carefully.</p>
 
         <h2>What I learned</h2>
-        <p><span class="todo">Write 2–3 sentences about the MVC pattern, security basics, and deployment.</span></p>
+        <p>I learned how the MVC pattern separates application logic from presentation, and how Laravel's routing,
+            controllers, models, and Blade templates work together to build maintainable features. I also gained a
+            solid grounding in web security basics, password hashing with Bcrypt, CSRF protection, input validation,
+            and XSS prevention. Finally, deploying the finished application taught me how to configure a production
+            environment, manage dependencies with Composer, and build assets with Vite.</p>
 
         <nav class="pager" aria-label="Project navigation">
             <a class="prev" href="travel-expense.html"><small>Previous project</small>&larr; Travel &amp; Expense
